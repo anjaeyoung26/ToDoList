@@ -54,7 +54,7 @@
     + TaskService : Firebase Database를 이용하여 Task 추가, 완료, 삭제, fetch   
 
         ~~~swift
-        protocol TaskServiceType {
+        protocol TaskServiceProtocol {
             func search(about target: Task, key completion: @escaping (String?) -> ())
 
             func add(_ targetDictionary: [String:Any]) -> Observable<ServiceResult>
@@ -74,7 +74,7 @@
         &emsp;로그인 방식은 Email/Password, Facebook, Google 세 종류가 있습니다.
 
         ~~~swift
-        protocol AuthServiceType {
+        protocol AuthServiceProtocol {
             func signUp(with email: String, _ name: String, _ password: String, _ conformPassword: String) -> Observable<ServiceResult>
 
             func signInWithEmail(email: String, password: String) -> Observable<ServiceResult>
