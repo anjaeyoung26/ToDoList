@@ -74,8 +74,8 @@ class SignUpViewController: BaseViewController {
     $0.setTitle("Sign Up", for: .normal)
     $0.titleLabel?.font = Font.Avenir.bold(size: 23)
     $0.layer.shadowColor = UIColor.black.cgColor
-    $0.layer.shadowOffset = CGSize(width: 0, height: 8)
-    $0.layer.shadowRadius = 10
+    $0.layer.shadowOffset = CGSize(width: 0, height: 3)
+    $0.layer.shadowRadius = 5
   }
   
   let checkName = UIImageView().then {
