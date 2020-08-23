@@ -11,6 +11,7 @@ import UIKit
 extension UIButton {
   func setEnabledState(_ isEnabled: Bool) {
     self.backgroundColor = isEnabled ? .black : Color.darkGrayish
+    self.layer.shadowOpacity = isEnabled ? 0.5 : 0
     self.alpha = isEnabled ? 1 : 0.1
     self.isEnabled = isEnabled
   }
