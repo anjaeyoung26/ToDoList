@@ -117,9 +117,9 @@ class DescriptionViewController: BaseViewController {
   }
   
   let btnAdd = UIButton().then {
-    $0.titleLabel?.font = Font.Avenir.bold(size: 23)
     $0.setTitleColor(.white, for: .normal)
     $0.setTitle("Add task", for: .normal)
+    $0.titleLabel?.font = Font.Avenir.bold(size: 23)
     $0.layer.shadowOffset = CGSize(width: 0, height: 3)
     $0.layer.shadowColor = UIColor.black.cgColor
     $0.layer.shadowRadius = 5
