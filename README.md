@@ -237,7 +237,7 @@
                 }
                 ~~~
 
-                SignInViewController에서 사용
+                `SignInViewController` 에서 사용
 
                 ~~~swift
                 facebookButton.rx.result
