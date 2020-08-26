@@ -1,6 +1,7 @@
 # __ToDoList__
 
 ![Swift](http://img.shields.io/badge/Swift-5.2-orange.svg)
+[![HitCount](http://hits.dwyl.com/anjaeyoung26/LocalCurrencyFranchise.svg)](http://hits.dwyl.com/anjaeyoung26/LocalCurrencyFranchise)
 
 인원 : 1명   
 
