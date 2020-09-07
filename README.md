@@ -1,13 +1,12 @@
 # __ToDoList__
 
 ![Swift](http://img.shields.io/badge/Swift-5.2-orange.svg)
-[![HitCount](http://hits.dwyl.com/anjaeyoung26/LocalCurrencyFranchise.svg)](http://hits.dwyl.com/anjaeyoung26/LocalCurrencyFranchise)
 
 인원 : 1명   
 
 기간 : 2020.04.16 - 2020.05.07   
 
-## __스크린샷__
+## __Screenshot__
 
 <img src="ToDoList/Resource/Screenshots/LoginViewController.png" width="200" height="400"> <img src="ToDoList/Resource/Screenshots/ResetPasswordViewController.png" width="200" height="400"> <img src="ToDoList/Resource/Screenshots/SignUpViewController.png" width="200" height="400">
 
@@ -39,14 +38,14 @@
 
 <img src="ToDoList/Resource/gif/SignUpViewController.gif" width="200" height="400"> <img src="ToDoList/Resource/gif/ResetPasswordViewController.gif" width="200" height="400"> <img src="ToDoList/Resource/gif/DescriptionViewController.gif" width="200" height="400">
 
-- Without storyboard
+- Without Storyboard
 
 ## __Requirement__
 
 - iOS 13
-    - Using SFSymbols
+    - Using `SFSymbols`
 - Swift 5
-    - Using Result Type
+    - Using `Result Type`
 
 ## __Project Structure__
 
@@ -92,7 +91,7 @@
 
 + __Model__   
 
-    &emsp;User, Task 모델은 ObjectMapper를 이용해서 JSON을 Mapping 했습니다.
+    &emsp;User, Task 모델은 `ObjectMapper` 를 이용해서 JSON을 Mapping 했습니다.
 
     + User
 
@@ -194,7 +193,7 @@
 
             + FacebookDelegateProxy, GoogleDelegateProxy
 
-                Facebook, Google 로그인 후 제공되는 provider data의 display name 정보를 Firebase Database에 저장하기 위한 Delegate를 Reactive한 방식으로 사용하기 위한 Delegate Proxy 입니다.
+                Facebook, Google 로그인 후 제공되는 provider data의 display name 정보를 Firebase Database에 저장하기 위한 Delegate를 Reactive한 방식으로 사용하기 위한 `Delegate Proxy` 입니다.
 
                 ~~~swift
                 import FBSDKLoginKit
@@ -261,7 +260,7 @@
 
         + SCLAlertView  
 
-            &emsp;Firebase/Auth에서 발생하는 error를 SCLAlertView를 이용해 사용자에게 알릴 수 있도록 구현했습니다.
+            &emsp;Firebase/Auth에서 발생하는 error를 `SCLAlertView` 를 이용해 사용자에게 알릴 수 있도록 구현했습니다.
 
             ~~~swift
             extension AuthErrorCode {
@@ -306,7 +305,7 @@
     
     + KeyboardObserverProtocol   
 
-        protocol을 채택한 View Controller에서 keyboardWillShowNotification과 keyboardWillHideNotification에 대한 Observer를 생성하여 사용자가 텍스트 입력 시 키보드에 의해 View 가 가려지는 현상을 방지할 수 있도록 구현했습니다.
+        Protocol을 채택한 View Controller에서 `keyboardWillShowNotification` 과 `keyboardWillHideNotification` 에 대한 Observer를 생성하여 사용자가 텍스트 입력 시 키보드에 의해 View 가 가려지는 현상을 방지할 수 있도록 구현했습니다.
 
         ~~~swift
         protocol KeyboardObserverProtocol {
@@ -316,5 +315,5 @@
         }
         ~~~
 
-        register(for object: AnyObject)는 특정 Object만 Observer의 대상으로 지정하기 위해 구현했습니다.
+        `register(for object: AnyObject)` 는 특정 Object만 Observer의 대상으로 지정하기 위해 구현했습니다.
         
