@@ -30,6 +30,7 @@
 		494130A024E7C60600A238AD /* GoogleDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4941309F24E7C60600A238AD /* GoogleDelegateProxy.swift */; };
 		494130AA24EA3D8000A238AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 494130A924EA3D8000A238AD /* GoogleService-Info.plist */; };
 		4977E39924D6AE2800F6EFC5 /* ServiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977E39824D6AE2800F6EFC5 /* ServiceResult.swift */; };
+		498F8E5724FA3757005637F5 /* Book.png in Resources */ = {isa = PBXBuildFile; fileRef = 498F8E5624FA3757005637F5 /* Book.png */; };
 		49A5967D24DD8D8100DAB703 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5967C24DD8D8100DAB703 /* Category.swift */; };
 		49A5967F24DD986400DAB703 /* SCLAlertViewStyle+HexCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5967E24DD986400DAB703 /* SCLAlertViewStyle+HexCode.swift */; };
 		49A5969E24E281A400DAB703 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5969D24E281A400DAB703 /* Color.swift */; };
@@ -48,7 +49,6 @@
 		49B2671524A56EEE00AE7369 /* Email.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B2670E24A56EEE00AE7369 /* Email.png */; };
 		49B2671624A56EEE00AE7369 /* Close eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B2670F24A56EEE00AE7369 /* Close eye.png */; };
 		49B2671A24A56EEE00AE7369 /* Open eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B2671324A56EEE00AE7369 /* Open eye.png */; };
-		49B2676824A56FAB00AE7369 /* Book.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B2675D24A56FAB00AE7369 /* Book.png */; };
 		49B2679E24A7B4F000AE7369 /* Password.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B2679D24A7B4F000AE7369 /* Password.png */; };
 		49B267AE24A8641900AE7369 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B267AD24A8641900AE7369 /* Back.png */; };
 		49B268C424AF289000AE7369 /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B268C324AF289000AE7369 /* Cancel.png */; };
@@ -93,6 +93,7 @@
 		4941309F24E7C60600A238AD /* GoogleDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDelegateProxy.swift; sourceTree = "<group>"; };
 		494130A924EA3D8000A238AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4977E39824D6AE2800F6EFC5 /* ServiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResult.swift; sourceTree = "<group>"; };
+		498F8E5624FA3757005637F5 /* Book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Book.png; path = ToDoList/Resource/Images/Book.png; sourceTree = SOURCE_ROOT; };
 		49A5967C24DD8D8100DAB703 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		49A5967E24DD986400DAB703 /* SCLAlertViewStyle+HexCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCLAlertViewStyle+HexCode.swift"; sourceTree = "<group>"; };
 		49A5969D24E281A400DAB703 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -113,7 +114,6 @@
 		49B2670E24A56EEE00AE7369 /* Email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Email.png; sourceTree = "<group>"; };
 		49B2670F24A56EEE00AE7369 /* Close eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close eye.png"; sourceTree = "<group>"; };
 		49B2671324A56EEE00AE7369 /* Open eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Open eye.png"; sourceTree = "<group>"; };
-		49B2675D24A56FAB00AE7369 /* Book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Book.png; sourceTree = "<group>"; };
 		49B2679D24A7B4F000AE7369 /* Password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Password.png; sourceTree = "<group>"; };
 		49B267AD24A8641900AE7369 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
 		49B268C324AF289000AE7369 /* Cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cancel.png; sourceTree = "<group>"; };
@@ -321,17 +321,17 @@
 			path = "Supporting File";
 			sourceTree = "<group>";
 		};
-		49B266FF24A56E3000AE7369 /* Images */ = {
+		49B266FF24A56E3000AE7369 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				49B2674024A56F7700AE7369 /* Books */,
 			);
-			path = Images;
+			path = Image;
 			sourceTree = "<group>";
 		};
-		49B2670024A56E3700AE7369 /* Icons */ = {
+		49B2670024A56E3700AE7369 /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				498F8E5624FA3757005637F5 /* Book.png */,
 				49B40CCC24B9FF27008AC219 /* Facebook.png */,
 				49B40CCB24B9FF27008AC219 /* Google.png */,
 				49B268C324AF289000AE7369 /* Cancel.png */,
@@ -341,7 +341,7 @@
 				49B2670E24A56EEE00AE7369 /* Email.png */,
 				49B2679D24A7B4F000AE7369 /* Password.png */,
 			);
-			path = Icons;
+			path = Icon;
 			sourceTree = "<group>";
 		};
 		49B2670124A56E3C00AE7369 /* Resource */ = {
@@ -349,8 +349,8 @@
 			children = (
 				49B266F424A56E0800AE7369 /* LaunchScreen.storyboard */,
 				49B266F224A56E0800AE7369 /* Assets.xcassets */,
-				49B2670024A56E3700AE7369 /* Icons */,
-				49B266FF24A56E3000AE7369 /* Images */,
+				49B2670024A56E3700AE7369 /* Icon */,
+				49B266FF24A56E3000AE7369 /* Image */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -377,14 +377,6 @@
 				493B548524C28BA4002D3062 /* DescriptionViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		49B2674024A56F7700AE7369 /* Books */ = {
-			isa = PBXGroup;
-			children = (
-				49B2675D24A56FAB00AE7369 /* Book.png */,
-			);
-			path = Books;
 			sourceTree = "<group>";
 		};
 		49B40CCF24BAA553008AC219 /* Util */ = {
@@ -479,10 +471,10 @@
 				49B268C424AF289000AE7369 /* Cancel.png in Resources */,
 				49B40CCE24B9FF27008AC219 /* Facebook.png in Resources */,
 				49B2671524A56EEE00AE7369 /* Email.png in Resources */,
-				49B2676824A56FAB00AE7369 /* Book.png in Resources */,
 				49B2671624A56EEE00AE7369 /* Close eye.png in Resources */,
 				494130AA24EA3D8000A238AD /* GoogleService-Info.plist in Resources */,
 				49B2671A24A56EEE00AE7369 /* Open eye.png in Resources */,
+				498F8E5724FA3757005637F5 /* Book.png in Resources */,
 				49B40CCD24B9FF27008AC219 /* Google.png in Resources */,
 				49B266F624A56E0800AE7369 /* LaunchScreen.storyboard in Resources */,
 				49B2679E24A7B4F000AE7369 /* Password.png in Resources */,
