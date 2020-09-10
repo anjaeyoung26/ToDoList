@@ -28,7 +28,7 @@ class DescriptionViewModel: ViewModel {
   }
   
   struct Dependency {
-    let taskService: TaskServiceProtocol
+    let taskService: TaskServiceType
   }
 
   let input = Input()

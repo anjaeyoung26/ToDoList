@@ -20,7 +20,7 @@ class SignUpViewModel: ViewModel {
   }
   
   struct Dependency {
-    let authService: AuthServiceProtocol
+    let authService: AuthServiceType
   }
   
   let input = Input()

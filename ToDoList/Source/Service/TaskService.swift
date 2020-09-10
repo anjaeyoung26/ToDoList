@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import Firebase
 
-protocol TaskServiceProtocol {
+protocol TaskServiceType {
   func search(about target: Task, key completion: @escaping (String?) -> ())
   func add(_ targetDictionary: [String:Any]) -> Observable<ServiceResult>
   func fetch() -> Observable<[Task]>
@@ -22,7 +22,7 @@ protocol TaskServiceProtocol {
   func delete(_ target: Task) -> Observable<Void>
 }
 
-class TaskService: TaskServiceProtocol {
+class TaskService: TaskServiceType {
   let disposeBag = DisposeBag()
   
   var reference: DatabaseReference {

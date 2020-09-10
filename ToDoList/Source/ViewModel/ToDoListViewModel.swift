@@ -25,8 +25,8 @@ class ToDoListViewModel: ViewModel {
   }
   
   struct Dependency {
-    let taskService: TaskServiceProtocol
-    let authService: AuthServiceProtocol
+    let taskService: TaskServiceType
+    let authService: AuthServiceType
   }
   
   let input = Input()

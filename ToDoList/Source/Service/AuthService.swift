@@ -12,7 +12,7 @@ import GoogleSignIn
 import RxSwift
 import RxCocoa
 
-protocol AuthServiceProtocol {
+protocol AuthServiceType {
   func signUp(with email: String, _ name: String, _ password: String, _ conformPassword: String) -> Observable<ServiceResult>
   func signInWithEmail(email: String, password: String) -> Observable<ServiceResult>
   func signInWithGoogle(authentication: GIDAuthentication) -> Observable<ServiceResult>
@@ -21,7 +21,7 @@ protocol AuthServiceProtocol {
   func signOut(providerData: UserInfo) -> Observable<ServiceResult>
 }
 
-class AuthService: AuthServiceProtocol {
+class AuthService: AuthServiceType {
   
   let reference: DatabaseReference = Database.database().reference().child("users")
   
