@@ -200,53 +200,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4941308E24E4C14600A238AD /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				49A596A824E300F300DAB703 /* UIButton+State.swift */,
-				49D72C3824B498A60002EAC4 /* UIColor+Initialize.swift */,
-				49B40CEF24C046F6008AC219 /* UITextField+PaddingView.swift */,
-				493B54B824CB44B6002D3062 /* UIViewController+UITapGesture.swift */,
-				493B54B624CB4467002D3062 /* Notification+KeyboardHeight.swift */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
-		4941309124E4C15A00A238AD /* SCLAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				49A5967E24DD986400DAB703 /* SCLAlertViewStyle+HexCode.swift */,
-				49B40CC124B7FE23008AC219 /* SCLAlertView+AuthErrorCode.swift */,
-				49B40CC524B815BF008AC219 /* SCLAlertView+GIDSignInErrorCode.swift */,
-			);
-			path = SCLAlertView;
-			sourceTree = "<group>";
-		};
-		4941309224E4C17800A238AD /* FSCalendar */ = {
-			isa = PBXGroup;
-			children = (
-				49D72C3C24B4990D0002EAC4 /* FSCalendar+Initialize.swift */,
-			);
-			path = FSCalendar;
-			sourceTree = "<group>";
-		};
-		4941309A24E6EC6900A238AD /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				49D72C3A24B498EF0002EAC4 /* String.swift */,
-				49A596AA24E3088C00DAB703 /* Bool+Toggle.swift */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
-		49657E0324C0B3D500BB4739 /* Import */ = {
-			isa = PBXGroup;
-			children = (
-				49B2670424A56E8700AE7369 /* Import.swift */,
-			);
-			path = Import;
-			sourceTree = "<group>";
-		};
 		49657E0424C0B3F600BB4739 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,12 +255,19 @@
 		49B266FD24A56E1300AE7369 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				4941309A24E6EC6900A238AD /* Foundation */,
-				4941309224E4C17800A238AD /* FSCalendar */,
-				4941309124E4C15A00A238AD /* SCLAlertView */,
-				4941308E24E4C14600A238AD /* UIKit */,
 				493B54BC24CE550B002D3062 /* Rx */,
-				49657E0324C0B3D500BB4739 /* Import */,
+				49B2670424A56E8700AE7369 /* Import.swift */,
+				49D72C3A24B498EF0002EAC4 /* String.swift */,
+				49A596AA24E3088C00DAB703 /* Bool+Toggle.swift */,
+				49D72C3C24B4990D0002EAC4 /* FSCalendar+Initialize.swift */,
+				49A596A824E300F300DAB703 /* UIButton+State.swift */,
+				49D72C3824B498A60002EAC4 /* UIColor+Initialize.swift */,
+				49B40CEF24C046F6008AC219 /* UITextField+PaddingView.swift */,
+				493B54B824CB44B6002D3062 /* UIViewController+UITapGesture.swift */,
+				493B54B624CB4467002D3062 /* Notification+KeyboardHeight.swift */,
+				49A5967E24DD986400DAB703 /* SCLAlertViewStyle+HexCode.swift */,
+				49B40CC124B7FE23008AC219 /* SCLAlertView+AuthErrorCode.swift */,
+				49B40CC524B815BF008AC219 /* SCLAlertView+GIDSignInErrorCode.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
