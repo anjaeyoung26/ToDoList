@@ -65,15 +65,10 @@
         ~~~swift
         protocol AuthServiceProtocol {
             func signUp(with email: String, _ name: String, _ password: String, _ conformPassword: String) -> Observable<ServiceResult>
-
             func signInWithEmail(email: String, password: String) -> Observable<ServiceResult>
-
             func signInWithFacebook(accessToken: AccessToken) -> Observable<ServiceResult>
-
             func signInWithGoogle(authentication: GIDAuthentication) -> Observable<ServiceResult>
-
             func sendPasswordResetEmail(email: String) -> Observable<ServiceResult>
-
             func signOut(providerData: UserInfo) -> Observable<ServiceResult>
         }
         ~~~
