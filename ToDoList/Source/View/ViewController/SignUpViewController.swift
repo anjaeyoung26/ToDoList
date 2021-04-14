@@ -196,26 +196,23 @@ class SignUpViewController: BaseViewController {
   
   override func binding() {
     let entryObservable = Observable.combineLatest(
-      txtEmail.rx.text.orEmpty, txtName.rx.text.orEmpty, txtPassword.rx.text.orEmpty, txtConformPassword.rx.text.orEmpty).share()
+      txtEmail.rx.text.orEmpty, 
+      txtName.rx.text.orEmpty, 
+      txtPassword.rx.text.orEmpty, 
+      txtConformPassword.rx.text.orEmpty)
+    .share()
     
     entryObservable
       .map { email, name, password, conformPassword -> Bool in
-        let isEmailForm = email.isEmailForm()
-        let isNameHasCharacters = name.hasCharacters()
-        let isPasswordHasCharacters = password.hasCharacters()
-        let isConformPasswordHasCharacters = conformPassword.hasCharacters()
+        self.checkEmail.image = email.isEmailForm() ? SFSymbols.checkMarkCircle : SFSymbols.circle
+        self.checkName.image = name.hasCharacters() ? SFSymbols.checkMarkCircle : SFSymbols.circle
+        self.checkPassword.image = password.hasCharacters() ? SFSymbols.checkMarkCircle : SFSymbols.circle
+        self.checkConformPassword.image = conformPassword.hasCharacters() ? SFSymbols.checkMarkCircle : SFSymbols.circle
         
-        self.checkEmail.image = isEmailForm ? SFSymbols.checkMarkCircle : SFSymbols.circle
-        self.checkName.image = isNameHasCharacters ? SFSymbols.checkMarkCircle : SFSymbols.circle
-        self.checkPassword.image = isPasswordHasCharacters ? SFSymbols.checkMarkCircle : SFSymbols.circle
-        self.checkConformPassword.image = isConformPasswordHasCharacters ? SFSymbols.checkMarkCircle : SFSymbols.circle
-        
-        return isEmailForm && isNameHasCharacters && isPasswordHasCharacters && isConformPasswordHasCharacters
+        return email.isEmailForm() && name.hasCharacters() && password.hasCharacters() && conformPassword.hasCharacters()
       }
       .distinctUntilChanged()
-      .subscribe(onNext: {
-        self.btnSignUp.setEnabledState($0)
-      })
+      .subscribe(onNext: { self.btnSignUp.setEnabledState($0) })
       .disposed(by: disposeBag)
     
     btnSignUp.rx.tap
@@ -224,9 +221,7 @@ class SignUpViewController: BaseViewController {
       .disposed(by: disposeBag)
     
     btnDismiss.rx.tap
-      .bind(onNext: {
-        self.dismiss(animated: true, completion: nil)
-      })
+      .bind(onNext: { self.dismiss(animated: true, completion: nil) })
       .disposed(by: disposeBag)
     
     viewModel.output.result

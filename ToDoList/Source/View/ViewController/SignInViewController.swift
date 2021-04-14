@@ -228,48 +228,31 @@ class SignInViewController: BaseViewController {
   
   override func binding() {
     btnSignUp.rx.tap
-      .bind(onNext: {
-        let dependency = SignUpViewModel.Dependency(authService: AuthService())
-        let viewModel = SignUpViewModel(dependency: dependency)
-        let viewController = SignUpViewController(viewModel: viewModel)
-        self.present(viewController, animated: true, completion: nil)
-      })
+      .bind(onNext: { self.presentSignUpViewController() })
       .disposed(by: disposeBag)
     
     btnResetPassword.rx.tap
-      .bind(onNext: {
-        let dependency = ResetPasswordViewModel.Dependency(authService: AuthService())
-        let viewModel = ResetPasswordViewModel(dependency: dependency)
-        let viewController = ResetPasswordViewController(viewModel: viewModel)
-        self.present(viewController, animated: true, completion: nil)
-      })
+      .bind(onNext: { self.presentResetPasswordViewController() })
       .disposed(by: disposeBag)
     
     btnSignIn.rx.tap
-      .withLatestFrom(Observable.combineLatest(txtEmail.rx.text.orEmpty, txtPassword.rx.text.orEmpty))
+      .withLatestFrom(Observable.combineLatest(txtEmail.rx.text.orEmpty, 
+                                               txtPassword.rx.text.orEmpty))
       .map { (email: $0, password: $1) }
       .bind(to: viewModel.input.emailLogin)
       .disposed(by: disposeBag)
     
     btnFacebook.rx.tap
-      .bind(onNext: {
-        self.facebookDelegate.sendActions(for: .touchUpInside)
-      })
+      .bind(onNext: { self.facebookDelegate.sendActions(for: .touchUpInside) })
       .disposed(by: disposeBag)
     
     btnGoogle.rx.tap
-      .bind(onNext: {
-        self.googleDelegate.sendActions(for: .touchUpInside)
-      })
+      .bind(onNext: { self.googleDelegate.sendActions(for: .touchUpInside) })
       .disposed(by: disposeBag)
     
     btnSecurePassword.rx.tap
-      .do(afterNext: {
-        self.txtPassword.isSecureTextEntry.toggle()
-      })
-      .bind(onNext: {
-        self.btnSecurePassword.setImage(self.txtPassword.isSecureTextEntry ? Image.openEye : Image.closeEye, for: .normal)
-      })
+      .do(afterNext: { self.txtPassword.isSecureTextEntry.toggle() })
+      .bind(onNext: { self.btnSecurePassword.setImage(self.txtPassword.isSecureTextEntry ? Image.openEye : Image.closeEye, for: .normal) })
       .disposed(by: disposeBag)
     
     viewModel.output.loginResult
@@ -306,7 +289,9 @@ class SignInViewController: BaseViewController {
       })
       .disposed(by: disposeBag)
   }
-  
+}
+
+extension SignInViewController {
   @objc
   func presentToDoListViewController() {
     let dependency = ToDoListViewModel.Dependency(taskService: TaskService(), authService: AuthService())
@@ -320,5 +305,21 @@ class SignInViewController: BaseViewController {
       self.txtEmail.text = nil
       self.txtPassword.text = nil
     })
+  }
+  
+  private func presentSignUpViewController() {
+     let dependency = SignUpViewModel.Dependency(authService: AuthService())
+     let viewModel = SignUpViewModel(dependency: dependency)
+     let viewController = SignUpViewController(viewModel: viewModel)
+
+     self.present(viewController, animated: true, completion: nil)
+  }
+  
+  private func presentResetPasswordViewController() {
+    let dependency = ResetPasswordViewModel.Dependency(authService: AuthService())
+    let viewModel = ResetPasswordViewModel(dependency: dependency)
+    let viewController = ResetPasswordViewController(viewModel: viewModel)
+    
+    self.present(viewController, animated: true, completion: nil)
   }
 }

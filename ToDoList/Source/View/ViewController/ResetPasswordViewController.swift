@@ -129,9 +129,7 @@ class ResetPasswordViewController: BaseViewController {
     
     email
       .map { $0.isEmailForm() }
-      .subscribe(onNext: {
-        self.btnSend.setEnabledState($0)
-      })
+      .subscribe(onNext: { self.btnSend.setEnabledState($0) })
       .disposed(by: disposeBag)
     
     btnSend.rx.tap
@@ -155,9 +153,7 @@ class ResetPasswordViewController: BaseViewController {
       .disposed(by: disposeBag)
     
     Observable.of(btnSignIn.rx.tap, btnDismiss.rx.tap).merge()
-      .bind(onNext: {
-        self.dismiss(animated: true, completion: nil)
-      })
+      .bind(onNext: { self.dismiss(animated: true, completion: nil) })
       .disposed(by: disposeBag)
   }
 }

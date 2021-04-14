@@ -289,9 +289,7 @@ class DescriptionViewController: BaseViewController {
       .disposed(by: disposeBag)
     
     btnDismiss.rx.tap
-      .bind(onNext: {
-        self.dismiss(animated: true, completion: nil)
-      })
+      .bind(onNext: { self.dismiss(animated: true, completion: nil) })
       .disposed(by: disposeBag)
     
     btnSelectDate.rx.tap
@@ -322,9 +320,7 @@ class DescriptionViewController: BaseViewController {
       .disposed(by: disposeBag)
     
     viewModel.output.validateResult
-      .subscribe(onNext: {
-        self.btnAdd.setEnabledState($0)
-      })
+      .subscribe(onNext: { self.btnAdd.setEnabledState($0) })
       .disposed(by: disposeBag)
     
     viewModel.output.addResult

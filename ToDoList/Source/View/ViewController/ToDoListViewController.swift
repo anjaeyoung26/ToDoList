@@ -15,7 +15,8 @@ import UIKit
 class ToDoListViewController: BaseViewController {
   
   struct Item {
-    static let size = CGSize(width: UIScreen.main.bounds.width / 1.15, height: UIScreen.main.bounds.height / 5)
+    static let size = CGSize(width: UIScreen.main.bounds.width / 1.15, 
+                             height: UIScreen.main.bounds.height / 5)
   }
   
   let calendar = FSCalendar(scope: .week).then {
@@ -148,16 +149,11 @@ class ToDoListViewController: BaseViewController {
       .disposed(by: disposeBag)
     
     tableView.rx.itemSelected
-      .bind(onNext: {
-        self.toggleCell(indexPath: $0)
-      })
+      .bind(onNext: { self.toggleCell(indexPath: $0) })
       .disposed(by: disposeBag)
     
     btnAddTask.rx.tap
-      .bind(onNext: {
-        let viewController = CategoryViewController()
-        self.present(viewController, animated: true, completion: nil)
-      })
+      .bind(onNext: { self.presentCategoryViewController() })
       .disposed(by: disposeBag)
     
     btnSignOut.rx.tap
@@ -199,6 +195,7 @@ class ToDoListViewController: BaseViewController {
   func toggleCell(indexPath: IndexPath) {
     let task = tasks[indexPath.row]
     task.isExpanded = !task.isExpanded
+    
     self.tableView.beginUpdates()
     self.tableView.reloadRows(at: [indexPath], with: .automatic)
     self.tableView.endUpdates()
@@ -213,6 +210,14 @@ class ToDoListViewController: BaseViewController {
   @objc
   func justReturn() {
     return
+  }
+}
+
+extension ToDoListViewController {
+  private func presentCategoryViewController() {
+     let viewController = CategoryViewController()
+    
+     self.present(viewController, animated: true, completion: nil)
   }
 }
 

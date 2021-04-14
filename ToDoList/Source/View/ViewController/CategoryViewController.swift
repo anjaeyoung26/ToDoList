@@ -13,7 +13,8 @@ import UIKit
 class CategoryViewController: BaseViewController {
   
   struct Item {
-    static let size = CGSize(width: UIScreen.main.bounds.width / 1.15, height: UIScreen.main.bounds.height / 5)
+    static let size = CGSize(width: UIScreen.main.bounds.width / 1.15, 
+                             height: UIScreen.main.bounds.height / 5)
   }
   
   let collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init()).then {
@@ -40,9 +41,7 @@ class CategoryViewController: BaseViewController {
     $0.setImage(SFSymbols.cancel, for: .normal)
   }
   
-  var category: [String] {
-    return Category.allCases.map { $0.rawValue }
-  }
+  var category: [String] = Category.allCases.map { $0.rawValue }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -93,14 +92,19 @@ class CategoryViewController: BaseViewController {
     
     collectionView.rx.itemSelected
       .map { self.category[$0.row] }
-      .bind(onNext: { category in
-        let dependency = DescriptionViewModel.Dependency(taskService: TaskService())
-        let viewModel = DescriptionViewModel(dependency: dependency)
-        let viewController = DescriptionViewController(viewModel: viewModel)
-        self.present(viewController, animated: true, completion: {
-          viewController.category.accept(category)
-        })
-      })
+      .bind(onNext: { self.presentDescriptionViewController(with: $0) })
       .disposed(by: disposeBag)
+  }
+}
+
+extension CategoryViewController {
+  private func presentDescriptionViewController(with category: String) {
+    let dependency = DescriptionViewModel.Dependency(taskService: TaskService())
+    let viewModel = DescriptionViewModel(dependency: dependency)
+    let viewController = DescriptionViewController(viewModel: viewModel)
+    
+    self.present(viewController, animated: true, completion: {
+      viewController.category.accept(category)
+    })
   }
 }
