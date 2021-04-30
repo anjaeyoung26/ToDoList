@@ -129,7 +129,7 @@ class AuthService: AuthServiceType {
     }
   }
   
-  func setValueForNewUser(uid: String, name: String) -> ServiceResult {
+  private func setValueForNewUser(uid: String, name: String) -> ServiceResult {
     var setValueError: NSError?
     self.reference.child(uid).setValue(["uid" : uid, "name" : name]) { error, reference in
       if let error = error as NSError? {
