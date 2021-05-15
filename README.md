@@ -8,9 +8,9 @@
 
 ## __Screenshot__
 
-<img src="ToDoList/Resource/Screenshots/LoginViewController.png" width="200" height="400"> <img src="ToDoList/Resource/Screenshots/ResetPasswordViewController.png" width="200" height="400"> <img src="ToDoList/Resource/Screenshots/SignUpViewController.png" width="200" height="400">
+<img src="ToDoList/Resources/Screenshots/LoginViewController.png" width="200" height="400"> <img src="ToDoList/Resources/Screenshots/ResetPasswordViewController.png" width="200" height="400"> <img src="ToDoList/Resources/Screenshots/SignUpViewController.png" width="200" height="400">
 
-<img src="ToDoList/Resource/gif/ToDoListViewController.gif" width="200" height="400"> <img src="ToDoList/Resource/Screenshots/CategoryViewController.png" width="200" height="400"> <img src="ToDoList/Resource/Screenshots/DescriptionViewController.png" width="200" height="400">
+<img src="ToDoList/Resources/gif/ToDoListViewController.gif" width="200" height="400"> <img src="ToDoList/Resources/Screenshots/CategoryViewController.png" width="200" height="400"> <img src="ToDoList/Resources/Screenshots/DescriptionViewController.png" width="200" height="400">
 
 ## __Library__, __SDK__
 
@@ -31,7 +31,7 @@
 - 소셜 로그인
 - 형식 검사
 
-<img src="ToDoList/Resource/gif/SignUpViewController.gif" width="200" height="400"> <img src="ToDoList/Resource/gif/ResetPasswordViewController.gif" width="200" height="400"> <img src="ToDoList/Resource/gif/DescriptionViewController.gif" width="200" height="400">
+<img src="ToDoList/Resources/gif/SignUpViewController.gif" width="200" height="400"> <img src="ToDoList/Resources/gif/ResetPasswordViewController.gif" width="200" height="400"> <img src="ToDoList/Resources/gif/DescriptionViewController.gif" width="200" height="400">
 
 - Without Storyboard
 
