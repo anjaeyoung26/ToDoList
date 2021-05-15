@@ -146,7 +146,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4929EA5624B4938E003E4F4A /* Cell */ = {
+		4929EA5624B4938E003E4F4A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				493B54AA24C96DA9002D3062 /* BaseTableViewCell.swift */,
@@ -155,20 +155,20 @@
 				4929EA5224B48E31003E4F4A /* TodayTasksCell.swift */,
 				49D72C3E24B49A190002EAC4 /* CategorysCell.swift */,
 			);
-			path = Cell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
-		493B548724C28F36002D3062 /* Service */ = {
+		493B548724C28F36002D3062 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				4977E39824D6AE2800F6EFC5 /* ServiceResult.swift */,
 				49D72C4224B5E57E0002EAC4 /* TaskService.swift */,
 				49B40CDC24BDEE20008AC219 /* AuthService.swift */,
 			);
-			path = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
-		493B54A124C86E12002D3062 /* ViewModel */ = {
+		493B54A124C86E12002D3062 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				493B54A224C86E44002D3062 /* ViewModel.swift */,
@@ -178,7 +178,7 @@
 				493B54B224CA8399002D3062 /* ToDoListViewModel.swift */,
 				493B54B424CB03D8002D3062 /* DescriptionViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		493B54BC24CE550B002D3062 /* Rx */ = {
@@ -191,16 +191,16 @@
 			path = Rx;
 			sourceTree = "<group>";
 		};
-		493B54BF24CE57D0002D3062 /* View */ = {
+		493B54BF24CE57D0002D3062 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4929EA5624B4938E003E4F4A /* Cell */,
-				49B2670324A56E4500AE7369 /* ViewController */,
+				4929EA5624B4938E003E4F4A /* Cells */,
+				49B2670324A56E4500AE7369 /* ViewControllers */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		49657E0424C0B3F600BB4739 /* Constant */ = {
+		49657E0424C0B3F600BB4739 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				49A5969D24E281A400DAB703 /* Color.swift */,
@@ -208,20 +208,20 @@
 				49A596A124E281B400DAB703 /* Font.swift */,
 				49A596A324E281D000DAB703 /* SFSymbol.swift */,
 			);
-			path = Constant;
+			path = Constants;
 			sourceTree = "<group>";
 		};
-		49A5969724E1379000DAB703 /* Source */ = {
+		49A5969724E1379000DAB703 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				49B266E924A56E0300AE7369 /* AppDelegate.swift */,
-				493B548724C28F36002D3062 /* Service */,
-				49B40CCF24BAA553008AC219 /* Util */,
-				49B2670224A56E4100AE7369 /* Model */,
-				493B54BF24CE57D0002D3062 /* View */,
-				493B54A124C86E12002D3062 /* ViewModel */,
+				493B548724C28F36002D3062 /* Services */,
+				49B40CCF24BAA553008AC219 /* Utils */,
+				49B2670224A56E4100AE7369 /* Models */,
+				493B54BF24CE57D0002D3062 /* Views */,
+				493B54A124C86E12002D3062 /* ViewModels */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		49B266DD24A56E0300AE7369 = {
@@ -245,14 +245,14 @@
 		49B266E824A56E0300AE7369 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				49A5969724E1379000DAB703 /* Source */,
-				49B2670124A56E3C00AE7369 /* Resource */,
-				49B266FE24A56E1C00AE7369 /* Supporting File */,
+				49A5969724E1379000DAB703 /* Sources */,
+				49B2670124A56E3C00AE7369 /* Resources */,
+				49B266FE24A56E1C00AE7369 /* Supporting Files */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
 		};
-		49B266FD24A56E1300AE7369 /* Extension */ = {
+		49B266FD24A56E1300AE7369 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				493B54BC24CE550B002D3062 /* Rx */,
@@ -269,16 +269,16 @@
 				49B40CC124B7FE23008AC219 /* SCLAlertView+AuthErrorCode.swift */,
 				49B40CC524B815BF008AC219 /* SCLAlertView+GIDSignInErrorCode.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		49B266FE24A56E1C00AE7369 /* Supporting File */ = {
+		49B266FE24A56E1C00AE7369 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				494130A924EA3D8000A238AD /* GoogleService-Info.plist */,
 				49B266F724A56E0800AE7369 /* Info.plist */,
 			);
-			path = "Supporting File";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		49B266FF24A56E3000AE7369 /* Image */ = {
@@ -304,7 +304,7 @@
 			path = Icon;
 			sourceTree = "<group>";
 		};
-		49B2670124A56E3C00AE7369 /* Resource */ = {
+		49B2670124A56E3C00AE7369 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				49B266F424A56E0800AE7369 /* LaunchScreen.storyboard */,
@@ -312,20 +312,20 @@
 				49B2670024A56E3700AE7369 /* Icon */,
 				49B266FF24A56E3000AE7369 /* Image */,
 			);
-			path = Resource;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		49B2670224A56E4100AE7369 /* Model */ = {
+		49B2670224A56E4100AE7369 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4906B68724C215F70065DA30 /* User.swift */,
 				4906B68924C229440065DA30 /* Task.swift */,
 				49A5967C24DD8D8100DAB703 /* Category.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		49B2670324A56E4500AE7369 /* ViewController */ = {
+		49B2670324A56E4500AE7369 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				493B54A824C96D49002D3062 /* BaseViewController.swift */,
@@ -336,18 +336,18 @@
 				493B548324C28B91002D3062 /* CategoryViewController.swift */,
 				493B548524C28BA4002D3062 /* DescriptionViewController.swift */,
 			);
-			path = ViewController;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		49B40CCF24BAA553008AC219 /* Util */ = {
+		49B40CCF24BAA553008AC219 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				49B266FD24A56E1300AE7369 /* Extension */,
-				49657E0424C0B3F600BB4739 /* Constant */,
+				49B266FD24A56E1300AE7369 /* Extensions */,
+				49657E0424C0B3F600BB4739 /* Constants */,
 				49B40CE624BFE52F008AC219 /* KeyboardObserverProtocol.swift */,
 				49B40CD124BAA6D7008AC219 /* SCLAlert.swift */,
 			);
-			path = Util;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D0C22CE509AFC6450BBA58C1 /* Frameworks */ = {
@@ -693,7 +693,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "/Users/anjaeyeong/Desktop/ToDoList/ToDoList/Supporting File/Info.plist";
+				INFOPLIST_FILE = "/Users/anjaeyeong/Desktop/ToDoList/ToDoList/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -713,7 +713,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "/Users/anjaeyeong/Desktop/ToDoList/ToDoList/Supporting File/Info.plist";
+				INFOPLIST_FILE = "/Users/anjaeyeong/Desktop/ToDoList/ToDoList/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
